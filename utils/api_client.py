@@ -7,7 +7,12 @@ class APIClient:
     def __init__(self):
         self.header = {"accept": "text/plain; v=1.0"}
 
-    def get(self, endpoint):
-        get_url = f"{self.BASE_URL}/{endpoint}"
-        response = requests.get(url=get_url, headers=self.header, timeout=5000)
+    def get_activities(self, endpoint):
+        url = f"{self.BASE_URL}/{endpoint}"
+        response = requests.get(url=url, headers=self.header, timeout=5000)
+        return response
+
+    def post_activities(self, endpoint, data):
+        url = f"{self.BASE_URL}/{endpoint}"
+        response = requests.post(url=url, headers=self.header, json=data, timeout=5000)
         return response
