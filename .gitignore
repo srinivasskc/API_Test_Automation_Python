@@ -53,3 +53,6 @@ reports/
 # Temp files
 *.tmp
 *.bak
+
+# Workspace
+API_Test_Automation_Python.code-workspace
