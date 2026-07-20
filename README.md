@@ -78,9 +78,21 @@ Test configuration is in `pytest.ini`:
 - Verbose output enabled
 - HTML report generation
 
-## Reports
+## Reports & CI/CD Summaries
 
-Test reports are generated in the `reports/` directory with timestamps.
+Test reports are automatically generated locally and uploaded to GitHub Actions during every pipeline run.
+
+### 1. View Locally
+Locally executed test reports are written directly into the `reports/` directory with explicit execution timestamps:
+* **Path:** `reports/reports_<timestamp>.html`
+
+### 2. Access via GitHub Actions
+Every time the automated CI/CD suite triggers on a push or a pull request, the test report is bundled up as a downloadable build artifact:
+
+1. Navigate to the [Actions tab](https://github.com/srinivasskc/API_Test_Automation_Python/actions) in the repository.
+2. Click on the most recent completed workflow run (marked with a green checkmark).
+3. Scroll down to the absolute bottom of the run summary page to the **Artifacts** block.
+4. Click on the **`pytest-report`** archive link to download the zip file containing your execution logs and interactive HTML summary.
 
 ## License
 
