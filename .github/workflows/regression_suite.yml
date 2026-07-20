@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout code
-        uses: actions/checkout@v4 # Upgraded from v3
+        uses: actions/checkout@v4.2.2 # Upgraded from v3
 
       - name: Setup Python
-        uses: actions/setup-python@v5 # Upgraded from v3
+        uses: actions/setup-python@v5.4.0 # Upgraded from v3
         with:
           python-version: '3.13'
 
@@ -28,7 +28,8 @@ jobs:
 
       - name: run tests
         run: |
-          pytest
+          # Added flags to actually generate the HTML report file
+          python -m pytest -s --html=report.html --self-contained-html
 
       - name: upload report
         uses: actions/upload-artifact@v4
