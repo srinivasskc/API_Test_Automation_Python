@@ -421,7 +421,6 @@ opik==2.0.62
 orjson==3.11.9
 ormsgpack==1.12.2
 overrides==7.7.0
-packaging==26.2
 pandas==2.3.3
 pandas-stubs==3.0.3.260530
 parso==0.8.7
