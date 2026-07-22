@@ -2,6 +2,7 @@ import pytest
 from datetime import datetime
 import os
 import json
+import requests
 
 
 @pytest.hookimpl(tryfirst=True)

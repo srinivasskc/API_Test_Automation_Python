@@ -1,0 +1,44 @@
+Types of Fixtures:
+- Browser Fixture
+- User Fixture
+- Environment Fixture
+- Data Fixture
+
+Fixtures:
+@pytest.fixture
+def name():
+    pass
+
+Common Fixture: 
+1. return fixture. - Returning the data
+2. parameterized fixture - When we have to use parameters.
+3. Scope based fixtures - session/module/class based fixtures
+4. AutoUse Fixture -  Once defined, test will automatically called
+5. Chaining Fixtures - database > user  > login (one fixture to another fixture)
+6. conftest.py fixture - all the tests going to use these fixtures.
+7. Factory Fixture - Returning a function of data.
+
+
+
+
+
+Pytest
+
+Pages (Page Object Model)
+- Separate files for each web Pages (login.py, dashboard.py)
+
+Config Folder
+
+Utils Folder (Reusable Helper Function)
+- Advantage: To avoid the duplicate code. 
+
+Reports Folder:
+
+Logs:
+
+Screenshots:
+
+
+------
+Steps:
+Install - pip install -U pytest
